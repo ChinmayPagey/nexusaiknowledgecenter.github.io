@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
 },
         "post-1": {
             id: "post-1",
-            title: "How to Optimize Your Workflows Using NexusAI", // Card 1 title
+            title: "Unlocking Efficiency and Innovation with NexusAI", // Card 1 title
             imageSrc: "Component 12.jpg", // Image for card 1
             tag: "NexusAI",
             fullContent: `
