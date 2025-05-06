@@ -1,0 +1,729 @@
+/* === Base Styles & Reset === */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f6f8; /* Slightly softer background */
+}
+
+img { /* Added base img style */
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+a { /* Added base link style */
+    text-decoration: none;
+    color: inherit;
+}
+
+/* === Main Header === */
+.main-header {
+     position: relative;
+     top: 0;
+     z-index: 100;
+     background-color: rgba(0, 85, 139, 100);
+     backdrop-filter: none;
+     -webkit-backdrop-filter: blur(10px);
+     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+     padding-top: 0px;
+     padding-bottom: 0px;
+     padding-right: 40px;
+     padding-left: 40px;
+}
+
+.header-container { /* Changed to apply flex to this container */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0; /* Adjust padding as needed */
+    max-width: 1200px; /* Optional: Set max-width */
+    margin: 0 auto;    /* Optional: Center container */
+}
+
+.main-header .logo img {
+   display: block;
+   height: 35px;
+   width: auto;
+   max-height: 45px;
+}
+
+.main-header .profile-icon {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #00558b; /* Adjusted color to match logo theme better */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 15px;
+}
+
+.main-header .profile-icon:hover {
+    background-color: #fff;
+}
+
+/* Removed unused .main-nav, .user-profile styles */
+
+/* === General Button Styles === */
+.kc-button {
+    position: relative; /* Changed from sticky */
+    padding: 0.6rem 1.2rem; /* Base padding */
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid transparent; /* Base border */
+    line-height: 1.5; /* Consistent line height */
+    display: inline-block; /* Ensure buttons behave like blocks */
+}
+
+/* Primary Button */
+.kc-button { /* Default style */
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.kc-button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    box-shadow: 0 2px 5px rgba(0, 86, 179, 0.2);
+}
+
+/* Outline Button (e.g., View All, Load More) */
+.kc-button.kc-button-outline {
+    color: #007bff;
+    background-color: transparent;
+    border-color: #ced4da; /* Use a neutral border */
+}
+.kc-button.kc-button-outline:hover {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+    color: #0056b3;
+}
+
+/* Outline Light (e.g., on dark background like carousel) */
+.kc-button.kc-button-outline-light {
+    color: #fff;
+    background-color: transparent;
+    border-color: #fff;
+}
+.kc-button.kc-button-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: #fff;
+    color: #fff;
+}
+
+
+/* === Knowledge Center Container & Tab Navigation === */
+.knowledge-center-container {
+    position: sticky; /* Makes the navbar sticky */
+    top: 0; /* Sticks to the top of the viewport */
+    background-color: rgba(255, 255, 255, 1); /* Solid white */
+    padding: 5px 0; /* Vertical padding */
+    padding-left: 25px;
+    z-index: 99; /* Position above other content */
+    box-shadow: 0px 7px 60.5px 0px rgba(0, 0, 0, 0.08);
+   
+}
+
+.knowledge-center-nav ul {
+    list-style: none; /* Remove default list styles */
+    display: flex; /* Use flexbox for horizontal layout */
+    padding: 0; /* Reset padding */
+    margin: 0;
+    position: relative; /* Needed for the underline */
+}
+
+.knowledge-center-nav li {
+    margin-right: 1rem; /* Space between items */
+}
+
+.knowledge-center-nav .kc-tab {
+    display: block; /* Use block to fill the link area */
+    padding: 0.8rem 1.4rem; /* Padding for buttons */
+    text-decoration: none; /* Remove underline */
+    color: #495057; /* Text color */
+    font-weight: 500; /* Slightly bolder */
+    border: 1px solid transparent; /* Base border */
+    border-radius: 6px; /* Rounded corners */
+    opacity: 0.7; /* Slightly less opaque */
+    transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease; /* Smooth transition */
+}
+
+.knowledge-center-nav .kc-tab span {
+    display: inline-block; /* Allows positioning context */
+    position: relative; /* Needed for the ::after pseudo-element */
+}
+
+.knowledge-center-nav .kc-tab.active {
+    background-color: transparent; /* Active tab background transparent */
+    color: #000000; /* Active tab text color */
+    font-weight: 700;
+    opacity: 1;
+}
+
+.kc-underline {
+    position: absolute;
+    bottom: 0px;
+    height: 3px; /* Thickness */
+    background-color: black; /* Color */
+    transition: left 0.3s ease-in-out, width 0.3s ease-in-out;
+    width: 0;
+    left: 0;
+}
+
+/* === Main Content Area & Sections === */
+.knowledge-center-main {
+    /* White background for content */
+   
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+    min-height: 600px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+    overflow: hidden; /* Ensures contained border-radius */
+    max-width: 98%; /* Optional: Match nav width */
+    margin: 0 auto; /* Center */
+}
+
+.kc-content-section {
+    display: none; /* Hidden by default, JS handles active */
+    /* Padding is removed here and applied to inner sections */
+    animation: contentFadeIn 0.4s ease-out; /* Fade in effect */
+}
+@keyframes contentFadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.kc-content-section.active-content {
+    display: block;
+}
+
+/* General utility for hidden elements */
+.hidden {
+    display: none !important;
+}
+
+/* === NexusAI Manual Section Styles === */
+#manual-content {
+    padding: 0; /* Remove default padding for full layout control */
+}
+
+.manual-layout { display: flex; }
+.manual-sidebar { flex: 0 0 280px; background-color: #f8f9fd; border-right: 1px solid #dee2e6; padding: 1.5rem; height: auto; min-height: 600px; }
+.manual-content-display { flex: 1; padding: 2rem 2.5rem; overflow-y: auto; background-color: #ffffff; /* Changed to white */ } /* Added padding here */
+
+.search-docs { position: relative; margin-bottom: 0.5rem; }
+.search-docs input { width: 100%; padding: 0.7rem 0.7rem 0.7rem 2.8rem; border: 1px solid #ced4da; border-radius: 4px; font-size: 0.95rem; }
+.search-docs .fa-search { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: #adb5bd; font-size: 1rem; }
+.manual-nav-list { margin-top: 1rem; }
+.manual-nav-list ul { list-style: none; padding-left: 0; }
+.manual-nav-list li { margin-bottom: 0.2rem; }
+.manual-nav-list a { text-decoration: none; color: #343a40; display: block; padding: 0.5rem 0.8rem; border-radius: 4px; transition: background-color 0.2s ease, color 0.2s ease; font-size: 0.9rem; line-height: 1.4; }
+.manual-nav-list a:hover { background-color: #e9ecef; color: #0056b3; }
+.manual-nav-list a.active { background-color: #007bff; color: #ffffff; font-weight: 500; }
+.manual-nav-list .submenu { padding-left: 0.8rem; margin-left: 0.5rem; margin-top: 0.3rem; border-left: 2px solid #e0e0e0; overflow: hidden; }
+.manual-nav-list .submenu li a { font-weight: normal; font-size: 0.88rem; padding: 0.4rem 0.8rem; }
+.manual-nav-list .submenu a.active { background-color: #ddeeff; color: #0056b3; }
+
+.manual-content-display .breadcrumbs { font-size: 0.85rem; color: #6c757d; margin-bottom: 1.2rem; padding-bottom: 0.8rem; border-bottom: 1px solid #eee; }
+.manual-content-display .breadcrumbs a { color: #007bff; text-decoration: none; }
+.manual-content-display .breadcrumbs a:hover { text-decoration: underline; }
+.manual-content-display .breadcrumbs span { color: #343a40; }
+.manual-content-display h1 { font-size: 2.1rem; margin-bottom: 1.5rem; color: #212529; font-weight: 600; }
+.manual-content-display h2 { font-size: 1.7rem; margin-top: 2.5rem; margin-bottom: 1.2rem; color: #343a40; border-bottom: 1px solid #eee; padding-bottom: 0.6rem; font-weight: 600; }
+.manual-content-display p, .manual-content-display ul, .manual-content-display ol { margin-bottom: 1.3rem; line-height: 1.7; color: #343a40; font-size: 1rem; }
+.manual-content-display ul, .manual-content-display ol { padding-left: 1.8rem; }
+.manual-content-display code { background-color: #e9ecef; padding: 0.2em 0.5em; border-radius: 4px; font-size: 0.9em; color: #212529; border: 1px solid #dee2e6; }
+
+
+/* ========================================= */
+/* === NEW BLOGS SECTION STYLES START === */
+/* ========================================= */
+
+#blogs-content {
+    /* Removed padding: 0; allow inner sections to have padding */
+    background-color: #f8f9fa; /* Light background for the whole blogs tab content area */
+}
+
+/* Headings within Blogs */
+#blogs-content h2,
+#blogs-content h3 {
+    margin-bottom: 0.75em;
+    font-weight: 600; /* Bold headings */
+}
+
+#blogs-content h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem); /* Responsive font size */
+}
+
+#blogs-content h3 {
+     font-size: clamp(1.1rem, 2.5vw, 1.25rem); /* Responsive font size */
+     margin-top: 0.5em; /* Space above heading inside card */
+}
+
+#blogs-content p {
+    color: #495057; /* Slightly lighter text for paragraphs */
+    margin-bottom: 1em;
+}
+
+/* Button Styles within Blogs */
+#blogs-content .btn { /* Scoped to blogs section */
+    display: inline-block;
+    padding: 10px 25px;
+    border: 1px solid #adb5bd; /* Default border */
+    border-radius: 6px; /* Slightly rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none; /* Ensure no underline */
+}
+
+#blogs-content .btn-read-more {
+    border-color: #87CEEB; /* Light blue border like image */
+    color: #007bff;
+    background-color: #fff;
+    border-radius: 20px; /* Pill shape */
+    padding: 12px 30px;
+}
+
+#blogs-content .btn-read-more:hover {
+    background-color: #87CEEB;
+    color: #fff;
+}
+
+#blogs-content .btn-view-all {
+    font-size: 0.9em;
+    border-color: #ced4da;
+    color: #495057;
+    background-color: #fff;
+    padding: 8px 20px;
+    border-radius: 4px; /* Less rounded */
+}
+
+#blogs-content .btn-view-all:hover {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+}
+
+/* Featured Post Section */
+#blogs-content .featured-post-section {
+    margin-bottom: 40px; /* Space below featured post */
+    background-color: #f8f9fd; /* White background */
+    padding: 30px; /* Padding inside the white box */
+    border-radius: 12px; 
+    /* Rounded corners for the whole box */
+    
+}
+
+#blogs-content .featured-post-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 40px; /* Space between image and text */
+    align-items: center; /* Vertically align items */
+}
+
+#blogs-content .featured-post-image img {
+    border-radius: 10px; /* Rounded corners for the image */
+    object-fit: cover; /* Ensure image covers the area */
+    width: 100%;
+    aspect-ratio: 16 / 10; /* Adjust aspect ratio as needed */
+}
+
+#blogs-content .featured-post-content .tag {
+    display: inline-block;
+    background-color: #e9ecef; /* Light gray background */
+    color: #6c757d; /* Gray text */
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+#blogs-content .featured-post-content h2 {
+     font-size: clamp(1.8rem, 5vw, 2.5rem); /* Larger heading for featured */
+     line-height: 1.3;
+}
+
+/* Blogs Grid Section */
+#blogs-content .blogs-grid-section {
+    margin-bottom: 40px;
+    padding: 0 30px; /* Add padding to match featured section */
+}
+
+#blogs-content .blogs-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #dee2e6; /* Light border */
+}
+
+#blogs-content .blogs-header h2 {
+    margin-bottom: 0; /* Remove margin from heading in header */
+}
+
+/* Blog Grid Container */
+#blogs-content .blog-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px; /* Space between cards */
+}
+
+#blogs-content .blog-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden; /* Clip image corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative; /* For the overlay link */
+    border: 1px solid #e9ecef; /* Add subtle border */
+}
+
+#blogs-content .blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+#blogs-content .blog-card-image img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Crop image nicely */
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transition: transform 0.4s ease; /* Add subtle zoom */
+}
+#blogs-content .blog-card:hover .blog-card-image img {
+     transform: scale(1.03);
+}
+
+
+#blogs-content .blog-card-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#blogs-content .blog-card-meta {
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+    color: #6c757d; /* Gray color for meta */
+}
+
+#blogs-content .blog-card-meta .views {
+    display: flex;
+    align-items: center;
+}
+
+#blogs-content .blog-card-meta svg { /* Style for inline SVG icon */
+    margin-right: 6px;
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+#blogs-content .blog-card-content p {
+    font-size: 0.9rem;
+    flex-grow: 1;
+    /* Limit text to N lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Show 3 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0;
+}
+
+/* Overlay link for the entire card */
+#blogs-content .card-link-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 1;
+    opacity: 0; /* Invisible but covers area */
+}
+
+/* Responsive Adjustments for Blog Section */
+@media (max-width: 992px) { /* Matches existing breakpoint */
+    #blogs-content .featured-post-container {
+        grid-template-columns: 1fr; /* Stack featured post vertically */
+        text-align: center;
+    }
+    #blogs-content .featured-post-image {
+        margin-bottom: 30px;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+     #blogs-content .featured-post-image img {
+        aspect-ratio: 16 / 9;
+     }
+    #blogs-content .featured-post-content {
+         align-items: center; /* Center tag/button */
+    }
+
+     #blogs-content .blog-grid-container {
+         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+}
+
+/* ========================================= */
+/* === NEW BLOGS SECTION STYLES END === */
+/* ========================================= */
+
+/* ========================================= */
+/* === BLOG POST DETAIL STYLES START === */
+/* ========================================= */
+
+#blog-post-detail {
+    /* Initially hidden by default .kc-content-section rule */
+    /* Ensure it inherits animation if desired */
+    background-color: #f8f9fa; /* Match blog list background */
+}
+
+.blog-post-container {
+    max-width: 1000px; /* Limit width for readability */
+    margin: 0 auto;
+    padding: 2rem; /* Add padding */
+}
+
+.back-to-blogs-btn {
+    display: inline-flex; /* Use flex to align icon and text */
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+    background: none;
+    border: none;
+    color: #495057; /* Subdued color */
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    padding: 5px 10px 5px 0; /* Add some padding */
+    transition: color 0.2s ease;
+}
+
+.back-to-blogs-btn:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+.back-to-blogs-btn i {
+    font-size: 0.9em; /* Slightly smaller icon */
+}
+
+.blog-post-grid {
+    display: grid;
+    grid-template-columns: 40% 1fr; /* Image takes 40% */
+    gap: 3rem; /* Space between image and header */
+    align-items: flex-start; /* Align header to top */
+    margin-bottom: 2.5rem;
+}
+
+.blog-post-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px; /* Match image style */
+    object-fit: cover;
+    aspect-ratio: 16 / 10; /* Maintain aspect ratio */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.blog-post-header .tag {
+    display: inline-block;
+    background-color: #e9ecef;
+    color: #6c757d;
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    margin-bottom: 1rem; /* Space below tag */
+    font-weight: 500;
+}
+
+.blog-post-header h1 { /* Target the h1 specifically */
+    font-size: clamp(1.8rem, 5vw, 2.4rem); /* Responsive title size */
+    font-weight: 700;
+    color: #212529;
+    line-height: 1.3;
+    margin-bottom: 1rem; /* Space below title */
+}
+
+.blog-post-meta {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.blog-post-meta .views { /* Inherits styles from blog list */
+    display: flex;
+    align-items: center;
+}
+.blog-post-meta svg {
+    margin-right: 6px;
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+.blog-post-body {
+    font-size: 1.05rem; /* Slightly larger font for reading */
+    line-height: 1.8; /* More line spacing */
+    color: #343a40; /* Standard text color */
+}
+
+.blog-post-body p {
+    margin-bottom: 1.5em;
+}
+
+/* Responsive Adjustments for Blog Post Detail */
+@media (max-width: 768px) {
+    .blog-post-grid {
+        grid-template-columns: 1fr; /* Stack image and header */
+        gap: 1.5rem;
+    }
+    .blog-post-image {
+        max-width: 80%; /* Don't let image take full width */
+        margin: 0 auto; /* Center image */
+    }
+     .blog-post-header h1 {
+         font-size: clamp(1.6rem, 6vw, 2rem);
+     }
+}
+
+@media (max-width: 576px) {
+    .blog-post-container {
+        padding: 1.5rem;
+    }
+    .blog-post-image {
+        max-width: 100%; /* Full width on smallest screens */
+    }
+    .blog-post-body {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+}
+
+/* ========================================= */
+/* === BLOG POST DETAIL STYLES END === */
+/* ========================================= */
+
+/* === What's New Section Styles === */
+#whats-new-content { padding: 2rem; background-color: #ffffff; }
+#whats-new-content h2 { margin-bottom: 1.8rem; color: #343a40; font-size: 1.8rem; border-bottom: 2px solid #0056b3; padding-bottom: 0.6rem; display: inline-block; font-weight: 600; }
+
+#whats-new-content .update-item {
+    padding: 1.8rem 0; /* More vertical padding */
+    border-bottom: 1px solid #e9ecef;
+}
+#whats-new-content .update-item:last-of-type { border-bottom: none; }
+
+.update-header { display: flex; justify-content: flex-end; margin-bottom: 0.6rem; }
+.update-date { font-size: 0.85rem; color: #6c757d; font-weight: 500; }
+
+.update-body { display: flex; align-items: flex-start; }
+.update-icon { font-size: 1.4rem; color: #007bff; margin-right: 1.3rem; width: 30px; text-align: center; margin-top: 0.25em; flex-shrink: 0; }
+.update-text h3 { font-size: 1.2rem; color: #343a40; margin-bottom: 0.6rem; font-weight: 600; }
+.update-text p { font-size: 0.95rem; color: #495057; margin-bottom: 0.8rem; line-height: 1.6; }
+.update-tags { margin-top: 0.8rem; } /* More space above tags */
+.update-tags .tag { display: inline-block; font-size: 0.75rem; background-color: #e2e6ea; color: #495057; padding: 0.3rem 0.8rem; border-radius: 15px; /* More rounded */ margin-right: 0.6rem; font-weight: 500; text-transform: capitalize; }
+
+.learn-more { font-size: 0.9rem; color: #007bff; text-decoration: none; font-weight: 600; display: inline-block; margin-top: 0.5rem; }
+.learn-more:hover { text-decoration: underline; }
+
+.load-more-btn { /* Uses .kc-button styles */
+    display: block;
+    margin: 2.5rem auto 1rem;
+}
+
+/* === Responsive Adjustments (General & Existing) === */
+@media (max-width: 992px) {
+    .manual-layout { flex-direction: column; }
+    .manual-sidebar { flex: 0 0 auto; width: 100%; border-right: none; border-bottom: 1px solid #dee2e6; min-height: auto; }
+    /* Blog grid responsive handled by its own media query */
+}
+
+@media (max-width: 768px) {
+    /* Reduced header padding */
+    .main-header {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .header-container {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    /* Adjust knowledge center nav container */
+     .knowledge-center-container {
+        padding-left: 15px;
+        padding-right: 15px;
+     }
+    .knowledge-center-nav ul { flex-wrap: wrap; justify-content: center; /* Center tabs */ }
+     .knowledge-center-nav li { margin-right: 0.5rem; margin-bottom: 0.5rem; }
+     .kc-content-section,
+     .manual-content-display,
+     #whats-new-content,
+     #blogs-content .featured-post-section, /* Adjust padding for blog sections too */
+     #blogs-content .blogs-grid-section {
+         padding: 1.5rem; /* Consistent padding */
+    }
+
+    #blogs-content .blogs-header {
+        flex-direction: column; /* Stack title and button */
+        align-items: flex-start;
+        gap: 10px;
+    }
+    #blogs-content .btn { /* Smaller buttons on mobile */
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+     #blogs-content .btn-read-more {
+        padding: 10px 25px;
+    }
+    #blogs-content .blog-grid-container {
+        grid-template-columns: 1fr; /* Single column on small mobile */
+        gap: 20px;
+    }
+     #blogs-content .blog-card-image img {
+        height: 180px; /* Slightly shorter image on mobile */
+    }
+}
+
+@media (max-width: 576px) {
+     /* Further reduce padding */
+      .main-header {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .knowledge-center-container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+     .kc-content-section,
+     #manual-content .manual-sidebar,
+     .manual-content-display,
+     #whats-new-content,
+     #blogs-content .featured-post-section,
+     #blogs-content .blogs-grid-section {
+         padding: 1rem; /* Less padding on very small screens */
+    }
+     #blogs-content .featured-post-image {
+        max-width: 100%; /* Full width on small mobile */
+    }
+}
