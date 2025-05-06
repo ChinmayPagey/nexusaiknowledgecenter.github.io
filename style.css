@@ -53,12 +53,27 @@ a { /* Added base link style */
    width: auto;
    max-height: 45px;
 }
-.main-header .kctext img {
-    display: block;
-    height: 35px;
+.main-header .kctext {
+    /* This method centers it perfectly regardless of logo/profile icon width */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex; /* If you have an icon and text inside .kctext */
+    align-items: center; /* Vertically align icon and text */
+    gap: 8px; /* Space between icon and text if you have both */
+    color: white; /* Assuming text color is white */
+    font-size: 1.1rem; /* Adjust as needed */
+    font-weight: 500; /* Adjust as needed */
+}
+
+.main-header .kctext img { /* If "Knowledge Center" is an image */
+    display: block; /* Remove extra space below image */
+    /* Set height for the "Knowledge Center" image specifically */
+    height: 24px; /* Adjust this to your desired height for the KC image */
     width: auto;
-    max-height: 30px;
- }
+    max-height: 24px; /* Match height */
+}
 .main-header .profile-icon {
     background-color: rgba(255, 255, 255, 0.9);
     color: #00558b; /* Adjusted color to match logo theme better */
