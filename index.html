@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusAI - Knowledge Center</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Include Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="logo 2.png" alt="NexusAI Logo" /> <!-- Replace this path -->
+            </div>
+            <div class="profile-icon">
+                <i class="fas fa-user"></i>
+            </div>
+        </div>
+    </header>
+    <div class="knowledge-center-container">
+
+        <nav class="knowledge-center-nav">
+            <ul>
+                <li><a href="#" class="kc-tab active" data-target="#whats-new-content">
+                    <span>What's new</span>
+                </a></li>
+                <li><a href="#" class="kc-tab" data-target="#manual-content">
+                    <span>NexusAI User Manual</span>
+                </a></li>
+                <li><a href="#" class="kc-tab" data-target="#blogs-content">
+                    <span>Blogs</span>
+                </a></li>
+            </ul>
+             <!-- Underline element for active tab indication -->
+             <div class="kc-underline"></div>
+        </nav>
+    </div>
+
+        <!-- Main Content Area -->
+        <main class="knowledge-center-main">
+
+            <!-- ========================== -->
+            <!-- NexusAI User Manual Section -->
+            <!-- (Initially Hidden)        -->
+            <!-- ========================== -->
+            <section id="manual-content" class="kc-content-section">
+                <div class="manual-layout">
+                    <!-- Left Sidebar -->
+                    <aside class="manual-sidebar">
+                        <!--
+
+                        <div class="search-docs">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search Docs">
+                        </div>
+                         -->
+                        
+
+                        <nav class="manual-nav-list">
+                            <ul>
+                                <li>
+                                    <a href="#NexusAI Chat" class="manual-link">NexusAI Chat</a>
+
+                                </li>
+                                <li>
+                                    <a href="#HR Policy Assist" class="manual-link">HR Policy Assist</a>
+
+                                </li>
+                                <li>
+                                    <a href="#Document Query" class="manual-link">Document Query</a>
+
+                                </li>
+                                <li><a href="#Image Canvas" class="manual-link">Image Canvas</a></li>
+                            </ul>
+                        </nav>
+                    </aside>
+
+                    <!-- Right Content Display -->
+                    <article class="manual-content-display">
+                         <div class="breadcrumbs">
+                             <!-- Breadcrumbs updated by JS -->
+                             <a href="#">Docs</a> > <span>Select a topic</span>
+                         </div>
+                         <!-- Content below updated by JS -->
+                         <h1>NexusAI Documentation</h1>
+                         <p>Welcome to the NexusAI documentation. Please select a topic from the sidebar to get started.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- ========================== -->
+            <!-- Blogs Section             -->
+            <!-- (Initially Hidden)        -->
+            <!-- ========================== -->
+            <section id="blogs-content" class="kc-content-section">
+
+                 <!-- Featured Post Section (New) -->
+                <section class="featured-post-section">
+                    <div class="featured-post-container">
+                        <div class="featured-post-image">
+                            <!-- *** REPLACE with your actual image URL *** -->
+                            <img src="Component 12.jpg">
+                        </div>
+                        <div class="featured-post-content">
+                            <span class="tag">Blog</span>
+                            <h2>Unlocking Efficiency and Innovation with NexusAI</h2>
+                            <p>In the ever-evolving landscape of today’s business world, having access to advanced tools that streamline workflows and foster collaboration is essential. We are excited to introduce <strong>NexusAI</strong>, our internal platform designed to enhance productivity through a suite of...</p>
+                            <a href="#readmore-featured" class="btn btn-read-more">Read more</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Blogs Grid Section (New) -->
+                <section class="blogs-grid-section"> <!-- Renamed from blogs-section to avoid generic name clash -->
+                    <div class="blogs-header">
+                        <h2>Blogs</h2>
+                        
+                    </div>
+
+                    <div class="blog-grid-container">
+                        <!-- Blog Card 1 -->
+                        <article class="blog-card">
+                            <div class="blog-card-image">
+                                <!-- *** REPLACE with your actual image URL (e.g., Component 12.jpg) *** -->
+                                <img src="Component 12.jpg">
+                            </div>
+                            <div class="blog-card-content">
+                                <div class="blog-card-meta">
+                                    
+                                </div>
+                                <h3>How to Optimize Your Workflows Using NexusAI</h3>
+                                <p>In the ever-evolving landscape of today’s business world, having access to advanced tools that streamline workflows and foster collaboration is essential. We are excited to introduce <strong>NexusAI</strong>, our internal platform designed to enhance productivity through a suite of...</p>
+                            </div>
+                            <a href="#post1" data-post-id="post-1" class="card-link-overlay" aria-label="Read more about How to Optimize Your Workflows Using NexusAI"></a>
+                        </article>
+
+                        <!-- Blog Card 2 -->
+                        <article class="blog-card">
+                            <div class="blog-card-image">
+                                <!-- *** REPLACE with your actual image URL (e.g., Component 13.jpg) *** -->
+                                <img src="Component 14.jpg">
+                            </div>
+                            <div class="blog-card-content">
+                                <div class="blog-card-meta">
+                                    
+                                </div>
+                                <h3>Top AI Trends to Watch in 2025</h3>
+                                <p>Artificial intelligence continues its breakneck evolution, moving far beyond theoretical concepts and embedding itself into the fabric of our daily lives and business operations...</p>
+                            </div>
+                            <a href="#post2" data-post-id="post-2" class="card-link-overlay" aria-label="Read more about Top AI Trends to Watch in 2024"></a>
+                        </article>
+
+                        <!-- Blog Card 3 -->
+                        <article class="blog-card">
+                            <div class="blog-card-image">
+                                 <!-- *** REPLACE with your actual image URL (e.g., Component 14.jpg) *** -->
+                                <img src="Component 13.jpg">
+                            </div>
+                            <div class="blog-card-content">
+                                <div class="blog-card-meta">
+                                
+                                </div>
+                                <h3>Maximizing Data Security with NexusAI</h3>
+                                <p>In today's digital world, where data breaches and privacy concerns dominate headlines, security has become a paramount concern for organizations and users alike. It is important to understand the importance of protecting sensitive data and ensuring user privacy...</p>
+                            </div>
+                            <a href="#post3" data-post-id="post-3" class="card-link-overlay" aria-label="Read more about Top AI Trends to Watch in 2024"></a>
+                        </article>
+
+                        <!-- Add more <article class="blog-card"> elements here as needed -->
+                    
+                    </div>
+                </section>
+
+            </section>
+
+            <!-- ========================== -->
+            <!-- What's New Section        -->
+            <!-- (Initially Active)       -->
+            <!-- ========================== -->
+            <section id="whats-new-content" class="kc-content-section active-content">
+                 <h2>Latest Platform Updates</h2>
+                 <article class="update-item">
+                    <div class="update-header"><span class="update-date">October 26, 2025</span></div>
+                    <div class="update-body">
+                        <i class="fas fa-file-alt update-icon"></i>
+                        <div class="update-text">
+                            <h3>Document Query Functionality Added</h3>
+                            <p>Efficiently extract specific information from your uploaded documents using our new Document Query feature. Ask natural language questions directly to your text-based files (such as PDFs, Word documents, reports, or contracts).</p>
+                             <div class="update-tags"><span class="tag">New Feature</span></div>
+                           <!-- <a href="#" class="learn-more">Learn More &rarr;</a> -->
+                        </div>
+                    </div>
+                </article>
+                <article class="update-item">
+                     <div class="update-header"><span class="update-date">April 25, 2025</span></div>
+                    <div class="update-body">
+                        <i class="fas fa-users update-icon"></i>
+                        <div class="update-text">
+                            <h3>HR Policy Assist Module Now Available</h3>
+                            <p>Streamline access to human resources information with the HR Policy Assist module. This feature allows employees to receive immediate, AI-generated responses to common questions regarding company policies and benefits.</p>
+                             <div class="update-tags"><span class="tag">New Feature</span><span class="tag">HR</span></div>
+                        </div>
+                    </div>
+                </article>
+                 <article class="update-item">
+                     <div class="update-header"><span class="update-date">October 26, 2023</span></div>
+                    <div class="update-body">
+                        <i class="fas fa-palette update-icon"></i>
+                        <div class="update-text">
+                            <h3>Redesigned Welcome Page Experience</h3>
+                            <p>To improve navigation and initial user orientation, we have implemented a redesigned Welcome Page, providing clearer overview of NexusAI's core capabilities and more intuitive access to key features.</p>
+                            <div class="update-tags"><span class="tag">Improvement</span><span class="tag">UI/UX</span></div>
+                        </div>
+                    </div>
+                </article>
+                <article class="update-item">
+                     <div class="update-header"><span class="update-date">September 15, 2025</span></div>
+                    <div class="update-body">
+                        <i class="fas fa-chart-line update-icon"></i>
+                        <div class="update-text">
+                            <h3>Reporting Module Enhanced</h3>
+                            <p>New visualizations and export options have been added to the reporting module, providing deeper insights into your NexusAI usage and performance metrics.</p>
+                            <div class="update-tags"><span class="tag">Improvement</span><span class="tag">Reporting</span></div>
+                        </div>
+                    </div>
+                </article>
+                 <!--<button class="load-more-btn kc-button kc-button-outline">Load More Updates</button>  -->
+            </section>
+         <!-- End of #whats-new-content -->
+
+        <!-- ========================== -->
+        <!-- Blog Post Detail Section   -->
+        <!-- (Initially Hidden)       -->
+        <!-- ========================== -->
+        <section id="blog-post-detail" class="kc-content-section">
+            <div class="blog-post-container">
+                <button class="back-to-blogs-btn">
+                    <i class="fas fa-arrow-left"></i> Back
+                </button>
+
+                <div class="blog-post-grid">
+                    <div class="blog-post-image">
+                        <img src="Component 14.jpg" alt="Blog Post Image">
+                    </div>
+                    <div class="blog-post-header">
+                        <span class="tag">Blog</span>
+                        <h1 id="blog-post-title">Blog Post Title</h1>
+                         <div class="blog-post-meta">
+                            <span class="views">
+                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+                                    <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+                                </svg>
+                                <span id="blog-post-views">0</span> 
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <article class="blog-post-body" id="blog-post-body">
+                    <p>Loading blog content...</p>
+                </article>
+            </div>
+        </section>
+
+
+    
+        </main>
+    <!-- Removed closing </div> here, seems misplaced -->
+
+    <script src="script.js"></script>
+</body>
+</html>
