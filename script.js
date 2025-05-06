@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <ul>
                     <li>"What is the company policy on performance bonuses"</li>
                     <li>"What are the CREATE values at Crompton?"</li>
-                    <li>"How do I apply for maternity benefit leaves?"</li>
+                    <li>"How do I apply for maternity leave benefit?"</li>
                 </ul>
                 <p><strong>Note:</strong> HR Policy Assist is trained on approved company documents. For complex or sensitive matters, please consult directly with the HR department.</p>
                  <img src="HR Policy assist screen.png" alt="Placeholder HR Assist Interface" class="manual-inline-image">  <!-- Example Image -->
