@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "Document Query": { // Key matches href="#Document Query"
             content: `
                 <h1>Document Query</h1>
-                <p>Leverage NexusAI to interact with your uploaded documents (PDFs, Word files, etc.). Ask questions directly about the content within your files.</p>
+                <p>Leverage NexusAI to interact with your uploaded documents (PDFs, legal documents, contracts, reports etc.). Ask questions directly about the content within your files.</p>
                 <h2>How it Works:</h2>
                 <ol>
                     <li>Upload your document(s) through the designated interface.</li>
@@ -55,21 +55,21 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li>Summarizing long reports.</li>
                     <li>Extracting key data points from technical documents.</li>
                 </ul>
-                <p>Ensure your documents have selectable text for best results (scanned image-only PDFs may not work).</p>
+                <p>Ensure your documents have selectable text for best results (Documents other than PDFs may not work).</p>
             `
         },
         "Image Canvas": { // Key matches href="#Image Canvas"
             content: `
                 <h1>Image Canvas</h1>
                 <p>The Image Canvas integrates AI capabilities for image generation and editing (Details subject to feature availability).</p>
-                <h2>Potential Features (Illustrative):</h2>
+                <h2>Features:</h2>
                 <ul>
                     <li>Generating images from text descriptions (Text-to-Image).</li>
-                    <li>Editing existing images using AI tools (e.g., background removal, object replacement).</li>
-                    <li>Upscaling low-resolution images.</li>
+                    <li>Add Crompton Products in the images.</li>
+                    <li>Experiment with multiple posters for you advertising needs</li>
                 </ul>
                 <p>This section will be updated with detailed instructions and examples as the Image Canvas features are rolled out.</p>
-                <img src="images/placeholder-canvas.png" alt="Placeholder Image Canvas Interface" class="manual-inline-image"> <!-- Example Image -->
+                
             `
         }
         // Add more entries if you add more links in the sidebar
@@ -181,7 +181,34 @@ document.addEventListener('DOMContentLoaded', function() {
             imageSrc: "Component 14.jpg", // Image for card 2
             tag: "AI Trends",
          // Example views for card 2
-            fullContent: `<p>FULL CONTENT for the SECOND blog card: Artificial intelligence continues its breakneck evolution, moving far beyond theoretical concepts and embedding itself into the fabric of our daily lives and business operations. While headlines often buzz with the latest generative AI marvels, the underlying progress is even more profound.</p><p>Explore key trends like multimodal AI, advancements in LLMs, and the growing importance of ethical AI frameworks.</p>`
+            fullContent: `
+        <p>As we look toward 2025, artificial intelligence (AI) continues to make significant strides across various sectors, driving innovations that enhance efficiency, improve decision-making, and revolutionize user experiences. This year is set to be pivotal for AI evolution, with several emerging trends poised to reshape the landscape. Here are some of the key trends to watch for in 2025.</p>
+        
+        <h2>Trend #1: Multimodal AI: Unleashing the Power of Context</h2>
+        <p>Imagine a world where AI can understand and analyze information from various sources—including text, images, video, and audio. This is the transformative potential of multimodal AI. In 2025, multimodal learning will drive adoption by enabling agencies to analyze local and state-level data while integrating it with external datasets from sources like Google Earth Engine, Google Maps, Waze, and public data. This powerful combination will enhance decision-making, prepare for climate-related risks, and improve public infrastructure.</p>
+        <p>For example, Google AI empowers the Hawaii Department of Transportation (HDOT) to address climate challenges by leveraging Google Earth Engine and Google Cloud to deploy a Climate Resilience Platform. This allows them to assess risk and prioritize investment decisions based on multiple climate factors, asset conditions, and community impacts.</p>
+        
+        <h2>Trend #2: AI Agents: The Evolution from Chatbots to Multi-Agent Systems</h2>
+        <p>We've moved from simple chatbots to sophisticated AI agents capable of handling complex tasks. These agents can reason, plan, and learn from their interactions. In 2025, AI agents will help government employees work more efficiently, manage applications, gain deeper data insights, identify security threats, and bring their best ideas to fruition.</p>
+        <p>Sullivan County, NY, utilizes virtual agents powered by Google AI to serve citizens faster and more effectively, 24/7. This innovative approach supports citizen engagement beyond traditional work hours while freeing government workers to concentrate on strategic initiatives.</p>
+        
+        <h2>Trend #3: Assistive Search: The Next Frontier for Knowledge Work</h2>
+        <p>AI is transforming how we access and understand information. In 2025, generative AI will enhance the accuracy and efficiency of searching vast datasets. By investing in semantic search, automated metadata tools, and advanced document transcription, agencies will unlock the true value of their data, making it more accessible and actionable.</p>
+        <p>The Air Force Research Laboratory (AFRL) exemplifies this trend by leveraging Google Cloud’s advanced AI and machine learning capabilities to address complex challenges across a range of fields, including materials science, bioinformatics, and human performance optimization.</p>
+        
+        <h2>Trend #4: AI-Powered Constituent Experience: Seamless and Personalized</h2>
+        <p>In 2025, AI will significantly enhance citizen experiences. AI-powered tools will facilitate easier navigation of government websites and services, such as applying for permits and licenses in multiple languages, available around the clock.</p>
+        <p>For instance, the Wisconsin Department of Workforce Development (DWD) collaborated with Google AI to scale the state’s response to unemployment insurance claims, speeding up overall response times and effectively screening out fraudulent claims to ensure financial assistance reaches genuine recipients.</p>
+        
+        <h2>Trend #5: Security Gets Tighter—And Tougher—with AI</h2>
+        <p>As AI becomes increasingly integrated into government services, so do the security challenges it introduces. However, AI also serves as a powerful tool for enhancing security. In 2025, automating threat detection, analyzing large datasets, and rapidly responding to incidents will be critical for protecting government systems and sensitive information.</p>
+        <p>For example, New York City experiences around 90 billion cyber events each week. “We have to distill those 90 billion events down to less than 50 or 60 things we look at. We couldn’t do that without a lot of artificial intelligence and automated decision-making tools," explains Matthew Fraser, Chief Technology Officer of New York City.</p>
+
+        <h2>The Opportunity Ahead</h2>
+        <p>Across the public sector, there is a groundswell of enthusiasm for AI, with agencies harnessing its capabilities to enhance efficiency, improve decision-making, and better serve their constituents. In the future, we can expect agencies to appoint dedicated AI leaders who will drive governance, build public trust, and invest in effective workforce strategies that prioritize both AI advancements and security. These efforts are crucial for the responsible and secure development and deployment of AI across all levels of government.</p>
+
+        <p>As we embrace the future of AI in 2025, it will be essential to stay informed and adaptable, ensuring that these advancements deliver meaningful benefits to society.</p>
+    `
         },
         "post-3": {
              id: "post-3", // *** NOTE: You had post-2 twice in HTML for card 3, changing ID here to post-3 ***
