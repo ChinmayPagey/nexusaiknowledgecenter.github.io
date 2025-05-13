@@ -76,140 +76,111 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     const blogPostsData = {
-        "featured-post": {
-        "id": "featured-post",
-        "title": "Unlocking Efficiency and Innovation with NexusAI", // Title from featured post
-        "imageSrc": "Component 12.jpg", // ** Use the ACTUAL image for the featured post **
-        "tag": "Blog",
-        "fullContent": `
-            <p>In the ever-evolving landscape of today’s business world, having access to advanced tools that streamline workflows and foster collaboration is essential. We are excited to introduce <strong>NexusAI</strong>, our internal platform designed to enhance productivity through a suite of intuitive tools tailored to meet diverse needs. From powerful chat interfaces to specialized HR assistance, NexusAI empowers our team to work smarter, not harder. Let’s dive into the various tools NexusAI offers that can revolutionize your day-to-day tasks.</p>
-            
-            <h2>What is NexusAI?</h2>
-            <p>NexusAI is an all-in-one platform housing a range of tools aimed at optimizing different aspects of our work environment. Whether you’re looking to generate high-quality images for advertising or need help drafting HR policies, NexusAI has a solution for you. Below, we’ll explore the key tools within NexusAI and how they can enhance your workflows.</p>
-            
-            <h2>Key Features of NexusAI</h2>
-            <ol>
-                <li>
-                    <h3>NexusAI Chat</h3>
-                    <p>The cornerstone of our platform, NexusAI Chat, allows users to interact with multiple large language models (LLMs) through an easy-to-use chat interface. Need quick answers or assistance on a project? Simply engage with NexusAI Chat to receive instant insights, brainstorm ideas, or clarify doubts. Whether you're drafting emails, generating reports, or conducting research, this tool is designed to enhance communication and collaboration across teams.</p>
-                </li>
-                <li>
-                    <h3>HR Policy Assist</h3>
-                    <p>Navigating HR-related queries can often be a daunting task. With our HR Policy Assist tool, you can receive immediate answers to your HR questions, ranging from regulatory compliance to employee benefits. This feature streamlines the process of finding the information you need, ensuring that you remain informed about policies and procedures all while saving valuable time.</p>
-                </li>
-                <li>
-                    <h3>Document Query</h3>
-                    <p>The Document Query tool revolutionizes how we handle documentation. Users can upload their documents and engage in a dynamic analysis of the content. Got a lengthy policy manual or a complex report? Simply ask questions, and the tool will provide relevant insights and summaries, allowing you to find what you need without combing through pages of text. This feature significantly enhances research efficiency and boosts productivity.</p>
-                </li>
-                <li>
-                    <h3>Image Canvas</h3>
-                    <p>For those in marketing and advertising, the Image Canvas tool is a game-changer. Users can generate captivating images using Crompton products tailored for their advertising campaigns. Simplifying the creative process, this tool allows you to visualize your ideas quickly and efficiently, ensuring your marketing materials are both appealing and aligned with branding.</p>
-                </li>
-                <li>
-                    <h3>Mermaid Editor</h3>
-                    <p>Communicating complex information clearly is crucial, and the Mermaid Editor tool simplifies this process. Create visually engaging flowcharts and diagrams for presentations, reports, or team meetings in minutes. By transforming intricate ideas into easily digestible visuals, the Mermaid Editor ensures that your audience understands your message quickly.</p>
-                </li>
-            </ol>
-            
-            <h2>Why NexusAI Matters</h2>
-            <ul>
-                <li><strong>Increased Efficiency:</strong> Automate tasks and access information quickly, allowing you to focus on more strategic initiatives.</li>
-                <li><strong>Enhanced Collaboration:</strong> Foster teamwork by using shared tools that facilitate communication and idea generation.</li>
-                <li><strong>Improved Accessibility:</strong> With easy-to-use interfaces, all team members can access the information and tools they need without extensive training.</li>
-                <li><strong>Data-Driven Insights:</strong> Leverage AI-powered tools to make informed decisions based on real-time data analysis.</li>
-            </ul>
-            
-            <h2>Conclusion</h2>
-            <p>NexusAI is more than just a collection of tools; it represents a significant leap forward in how we work and collaborate. By harnessing the power of AI, we can streamline our workflows, enhance creativity, and make data-driven decisions that propel our organization forward.</p>
-            
-            <p>Explore NexusAI today and discover how you can leverage these innovative tools to optimize your work processes, foster collaboration, and ultimately unlock your full potential.</p>
-        `
+    "featured-post": {
+    "id": "featured-post",
+    "title": "NexusAI: Innovating with Integrity and Embodying Our CREATE Values", // Title from featured post
+    "imageSrc": "Component 12.jpg", // ** Use the ACTUAL image for the featured post **
+    "tag": "Blog",
+    "fullContent": `
+        <p>I'm incredibly excited to formally introduce NexusAI, our new internal AI platform designed to empower each of you, streamline workflows, and unlock new levels of productivity and insight right here at Crompton. As you explore the NexusAI homepage, you'll find a suite of powerful tools: NexusAI Chat for comprehensive assistance, HR Policy Assist for instant answers, Mermaid Editor for planning, Image Canvas for visual design, and Document Query for extracting insights.</p>
+        
+        <p>NexusAI represents a significant leap forward, born from our Entrepreneurial spirit – taking bold, proactive steps to leverage technology and spot opportunities for improvement. However, innovation at Crompton is always guided by our core principles. With the power of AI comes great responsibility, which is why NexusAI has been built upon the foundation of our CREATE values, ensuring we innovate with integrity and purpose.</p>
+        
+        <h2>How CREATE Values Shape NexusAI's Responsible AI Practices:</h2>
+        <p>Our specific RAI practices are direct reflections of these values:</p>
+        
+        <ul>
+            <li><strong>Fairness and Non-Discrimination (Embodying Caring & Ethical):</strong> We strive to ensure NexusAI tools treat all employees equitably, reflecting our Caring value. We focus on approved, standardized data for tools like HR Policy Assist and conduct audits to mitigate bias, upholding our Ethical commitment to fairness.</li>
+            <li><strong>Transparency and Explainability (Embodying Ethical & Team Player):</strong> Building trust (Team Player) requires clarity. We provide clear descriptions of tool capabilities and limitations. Where possible, tools like HR Policy Assist will cite sources, fostering transparency and reflecting our Ethical commitment to integrity.</li>
+            <li><strong>Accountability and Governance (Embodying Accountable & Responsible):</strong> Reflecting our Accountable value, we've established clear governance and ownership through a cross-functional team. This ensures we are Responsible for NexusAI's outcomes and stick to our commitments regarding its safe operation.</li>
+            <li><strong>Privacy and Security (Embodying Caring & Ethical):</strong> Protecting employee data is paramount, demonstrating we are Caring and Ethical. NexusAI operates within Crompton's security frameworks, employing privacy-preserving techniques and ensuring compliance, respecting individuals and maintaining integrity.</li>
+            <li><strong>Reliability, Robustness, and Safety (Embodying Responsible):</strong> NexusAI must be dependable, fulfilling our Responsible value. Rigorous testing, continuous monitoring, and safeguards against misuse ensure the tools perform reliably and safely as intended, sticking to our commitment of delivering functional and secure technology.</li>
+            <li><strong>Human-Centricity and Beneficial Use (Embodying Caring & Ethical):</strong> NexusAI is built for people, aligning with our Caring value to genuinely help. Its purpose is to augment your capabilities ethically. We emphasize that AI is an aid, and critical decisions require human judgment, ensuring technology serves our people and our Ethical principles.</li>
+        </ul>
+ 
+        <h2>An Ongoing Commitment & Your Role as a Team Player</h2>
+        <p>Living our CREATE values through Responsible AI is an ongoing journey. As NexusAI evolves, so will our practices, driven by our Entrepreneurial spirit of continuous learning and improvement.</p>
+
+        <p>Your role as a Team Player is crucial here. We encourage you to explore NexusAI and provide constructive feedback. If you encounter issues, have concerns, or see opportunities for improvement regarding fairness, transparency, or alignment with our values, please share feedback within NexusAI. Your input helps us build trust and ensure NexusAI truly serves our shared objectives.</p>
+
+        <p>NexusAI holds immense potential for Crompton. By grounding it firmly in our CREATE values through robust Responsible AI practices, we are ensuring this powerful technology becomes a trusted, ethical, and indispensable tool for all of us.</p>
+
+        <p>Thank you for embracing this innovation, and let's continue to CREATE our future together, responsibly.</p>
+    `
 },
-        "post-1": {
-            id: "post-1",
-            title: "Unlocking Efficiency and Innovation with NexusAI", // Card 1 title
-            imageSrc: "Component 12.jpg", // Image for card 1
-            tag: "NexusAI",
-            fullContent: `
-            <p>In the ever-evolving landscape of today’s business world, having access to advanced tools that streamline workflows and foster collaboration is essential. We are excited to introduce <strong>NexusAI</strong>, our internal platform designed to enhance productivity through a suite of intuitive tools tailored to meet diverse needs. From powerful chat interfaces to specialized HR assistance, NexusAI empowers our team to work smarter, not harder. Let’s dive into the various tools NexusAI offers that can revolutionize your day-to-day tasks.</p>
-            
-            <h2>What is NexusAI?</h2>
-            <p>NexusAI is an all-in-one platform housing a range of tools aimed at optimizing different aspects of our work environment. Whether you’re looking to generate high-quality images for advertising or need help drafting HR policies, NexusAI has a solution for you. Below, we’ll explore the key tools within NexusAI and how they can enhance your workflows.</p>
-            
-            <h2>Key Features of NexusAI</h2>
-            <ol>
-                <li>
-                    <h3>NexusAI Chat</h3>
-                    <p>The cornerstone of our platform, NexusAI Chat, allows users to interact with multiple large language models (LLMs) through an easy-to-use chat interface. Need quick answers or assistance on a project? Simply engage with NexusAI Chat to receive instant insights, brainstorm ideas, or clarify doubts. Whether you're drafting emails, generating reports, or conducting research, this tool is designed to enhance communication and collaboration across teams.</p>
-                </li>
-                <li>
-                    <h3>HR Policy Assist</h3>
-                    <p>Navigating HR-related queries can often be a daunting task. With our HR Policy Assist tool, you can receive immediate answers to your HR questions, ranging from regulatory compliance to employee benefits. This feature streamlines the process of finding the information you need, ensuring that you remain informed about policies and procedures all while saving valuable time.</p>
-                </li>
-                <li>
-                    <h3>Document Query</h3>
-                    <p>The Document Query tool revolutionizes how we handle documentation. Users can upload their documents and engage in a dynamic analysis of the content. Got a lengthy policy manual or a complex report? Simply ask questions, and the tool will provide relevant insights and summaries, allowing you to find what you need without combing through pages of text. This feature significantly enhances research efficiency and boosts productivity.</p>
-                </li>
-                <li>
-                    <h3>Image Canvas</h3>
-                    <p>For those in marketing and advertising, the Image Canvas tool is a game-changer. Users can generate captivating images using Crompton products tailored for their advertising campaigns. Simplifying the creative process, this tool allows you to visualize your ideas quickly and efficiently, ensuring your marketing materials are both appealing and aligned with branding.</p>
-                </li>
-                <li>
-                    <h3>Mermaid Editor</h3>
-                    <p>Communicating complex information clearly is crucial, and the Mermaid Editor tool simplifies this process. Create visually engaging flowcharts and diagrams for presentations, reports, or team meetings in minutes. By transforming intricate ideas into easily digestible visuals, the Mermaid Editor ensures that your audience understands your message quickly.</p>
-                </li>
-            </ol>
-            
-            <h2>Why NexusAI Matters</h2>
-            <ul>
-                <li><strong>Increased Efficiency:</strong> Automate tasks and access information quickly, allowing you to focus on more strategic initiatives.</li>
-                <li><strong>Enhanced Collaboration:</strong> Foster teamwork by using shared tools that facilitate communication and idea generation.</li>
-                <li><strong>Improved Accessibility:</strong> With easy-to-use interfaces, all team members can access the information and tools they need without extensive training.</li>
-                <li><strong>Data-Driven Insights:</strong> Leverage AI-powered tools to make informed decisions based on real-time data analysis.</li>
-            </ul>
-            
-            <h2>Conclusion</h2>
-            <p>NexusAI is more than just a collection of tools; it represents a significant leap forward in how we work and collaborate. By harnessing the power of AI, we can streamline our workflows, enhance creativity, and make data-driven decisions that propel our organization forward.</p>
-            
-            <p>Explore NexusAI today and discover how you can leverage these innovative tools to optimize your work processes, foster collaboration, and ultimately unlock your full potential.</p>
-        `
-            
-        },
+"post-1": {
+    id: "post-1",
+    title: "NexusAI: Innovating with Integrity and Embodying Our CREATE Values", // Card 1 title
+    imageSrc: "Component 12.jpg", // Image for card 1
+    tag: "NexusAI",
+    fullContent: `
+        <p>I'm incredibly excited to formally introduce NexusAI, our new internal AI platform designed to empower each of you, streamline workflows, and unlock new levels of productivity and insight right here at Crompton. As you explore the NexusAI homepage, you'll find a suite of powerful tools: NexusAI Chat for comprehensive assistance, HR Policy Assist for instant answers, Mermaid Editor for planning, Image Canvas for visual design, and Document Query for extracting insights.</p>
+        
+        <p>NexusAI represents a significant leap forward, born from our Entrepreneurial spirit – taking bold, proactive steps to leverage technology and spot opportunities for improvement. However, innovation at Crompton is always guided by our core principles. With the power of AI comes great responsibility, which is why NexusAI has been built upon the foundation of our CREATE values, ensuring we innovate with integrity and purpose.</p>
+        
+        <h2>How CREATE Values Shape NexusAI's Responsible AI Practices:</h2>
+        <p>Our specific RAI practices are direct reflections of these values:</p>
+        
+        <ul>
+            <li><strong>Fairness and Non-Discrimination (Embodying Caring & Ethical):</strong> We strive to ensure NexusAI tools treat all employees equitably, reflecting our Caring value. We focus on approved, standardized data for tools like HR Policy Assist and conduct audits to mitigate bias, upholding our Ethical commitment to fairness.</li>
+            <li><strong>Transparency and Explainability (Embodying Ethical & Team Player):</strong> Building trust (Team Player) requires clarity. We provide clear descriptions of tool capabilities and limitations. Where possible, tools like HR Policy Assist will cite sources, fostering transparency and reflecting our Ethical commitment to integrity.</li>
+            <li><strong>Accountability and Governance (Embodying Accountable & Responsible):</strong> Reflecting our Accountable value, we've established clear governance and ownership through a cross-functional team. This ensures we are Responsible for NexusAI's outcomes and stick to our commitments regarding its safe operation.</li>
+            <li><strong>Privacy and Security (Embodying Caring & Ethical):</strong> Protecting employee data is paramount, demonstrating we are Caring and Ethical. NexusAI operates within Crompton's security frameworks, employing privacy-preserving techniques and ensuring compliance, respecting individuals and maintaining integrity.</li>
+            <li><strong>Reliability, Robustness, and Safety (Embodying Responsible):</strong> NexusAI must be dependable, fulfilling our Responsible value. Rigorous testing, continuous monitoring, and safeguards against misuse ensure the tools perform reliably and safely as intended, sticking to our commitment of delivering functional and secure technology.</li>
+            <li><strong>Human-Centricity and Beneficial Use (Embodying Caring & Ethical):</strong> NexusAI is built for people, aligning with our Caring value to genuinely help. Its purpose is to augment your capabilities ethically. We emphasize that AI is an aid, and critical decisions require human judgment, ensuring technology serves our people and our Ethical principles.</li>
+        </ul>
+ 
+        <h2>An Ongoing Commitment & Your Role as a Team Player</h2>
+        <p>Living our CREATE values through Responsible AI is an ongoing journey. As NexusAI evolves, so will our practices, driven by our Entrepreneurial spirit of continuous learning and improvement.</p>
+
+        <p>Your role as a Team Player is crucial here. We encourage you to explore NexusAI and provide constructive feedback. If you encounter issues, have concerns, or see opportunities for improvement regarding fairness, transparency, or alignment with our values, please share feedback within NexusAI. Your input helps us build trust and ensure NexusAI truly serves our shared objectives.</p>
+
+        <p>NexusAI holds immense potential for Crompton. By grounding it firmly in our CREATE values through robust Responsible AI practices, we are ensuring this powerful technology becomes a trusted, ethical, and indispensable tool for all of us.</p>
+
+        <p>Thank you for embracing this innovation, and let's continue to CREATE our future together, responsibly.</p>
+    `
+},
         "post-2": {
             id: "post-2",
-            title: "Top AI Trends to Watch in 2025", // Card 2 title
-            imageSrc: "Component 14.jpg", // Image for card 2
-            tag: "AI Trends",
-         // Example views for card 2
-            fullContent: `
-        <p>As we look toward 2025, artificial intelligence (AI) continues to make significant strides across various sectors, driving innovations that enhance efficiency, improve decision-making, and revolutionize user experiences. This year is set to be pivotal for AI evolution, with several emerging trends poised to reshape the landscape. Here are some of the key trends to watch for in 2025.</p>
+    title: "Dependable Assistance: How We Ensure Reliability in NexusAI's HR Policy Assist (Our Responsible Commitment)", // Card 1 title
+    imageSrc: "Component 14.jpg", // Image for card 1
+    tag: "NexusAI",
+    fullContent: `
+        <p>Navigating company policies to find specific answers can sometimes feel like searching for a needle in a haystack. Whether you're clarifying leave entitlements, understanding expense guidelines, or checking the latest WFH policy, getting accurate information quickly is essential.</p>
         
-        <h2>Trend #1: Multimodal AI: Unleashing the Power of Context</h2>
-        <p>Imagine a world where AI can understand and analyze information from various sources—including text, images, video, and audio. This is the transformative potential of multimodal AI. In 2025, multimodal learning will drive adoption by enabling agencies to analyze local and state-level data while integrating it with external datasets from sources like Google Earth Engine, Google Maps, Waze, and public data. This powerful combination will enhance decision-making, prepare for climate-related risks, and improve public infrastructure.</p>
-        <p>For example, Google AI empowers the Hawaii Department of Transportation (HDOT) to address climate challenges by leveraging Google Earth Engine and Google Cloud to deploy a Climate Resilience Platform. This allows them to assess risk and prioritize investment decisions based on multiple climate factors, asset conditions, and community impacts.</p>
+        <p>That's precisely why we developed the HR Policy Assist, a key feature within our NexusAI platform. Its purpose is simple: to provide you with instant, easy-to-understand answers to your HR-related questions, directly drawing from official Crompton documentation.</p>
         
-        <h2>Trend #2: AI Agents: The Evolution from Chatbots to Multi-Agent Systems</h2>
-        <p>We've moved from simple chatbots to sophisticated AI agents capable of handling complex tasks. These agents can reason, plan, and learn from their interactions. In 2025, AI agents will help government employees work more efficiently, manage applications, gain deeper data insights, identify security threats, and bring their best ideas to fruition.</p>
-        <p>Sullivan County, NY, utilizes virtual agents powered by Google AI to serve citizens faster and more effectively, 24/7. This innovative approach supports citizen engagement beyond traditional work hours while freeing government workers to concentrate on strategic initiatives.</p>
+        <p>But for a tool like this to be truly valuable, it needs more than just speed – it needs reliability. When dealing with important information that affects your work and well-being, you must be able to trust the answers you receive. This reliability is not just a technical goal; it's a core component of our commitment to Responsible AI and a direct reflection of our CREATE values.</p>
         
-        <h2>Trend #3: Assistive Search: The Next Frontier for Knowledge Work</h2>
-        <p>AI is transforming how we access and understand information. In 2025, generative AI will enhance the accuracy and efficiency of searching vast datasets. By investing in semantic search, automated metadata tools, and advanced document transcription, agencies will unlock the true value of their data, making it more accessible and actionable.</p>
-        <p>The Air Force Research Laboratory (AFRL) exemplifies this trend by leveraging Google Cloud’s advanced AI and machine learning capabilities to address complex challenges across a range of fields, including materials science, bioinformatics, and human performance optimization.</p>
+        <h2>Reliability: The Foundation of Trustworthy AI</h2>
+        <p>An AI assistant providing incorrect or outdated policy information is worse than no assistant at all. It erodes trust, causes confusion, and can lead to mistakes. That's why ensuring the dependability of the HR Policy Assist has been a top priority from day one. Building trustworthy AI means building reliable AI.</p>
         
-        <h2>Trend #4: AI-Powered Constituent Experience: Seamless and Personalized</h2>
-        <p>In 2025, AI will significantly enhance citizen experiences. AI-powered tools will facilitate easier navigation of government websites and services, such as applying for permits and licenses in multiple languages, available around the clock.</p>
-        <p>For instance, the Wisconsin Department of Workforce Development (DWD) collaborated with Google AI to scale the state’s response to unemployment insurance claims, speeding up overall response times and effectively screening out fraudulent claims to ensure financial assistance reaches genuine recipients.</p>
+        <h2>How We Built Reliability into the HR Policy Assist:</h2>
+        <p>Our commitment to reliability isn't just a statement; it's embedded in the processes we follow:</p>
+        <ul>
+            <li><strong>Grounded in Official Sources:</strong> The HR Policy Assist doesn't guess or browse the internet. Its knowledge base is built exclusively from approved, up-to-date, official Crompton HR policy documents and resources. This ensures the information it accesses is authoritative and correct from the start.</li>
+            <li><strong>Rigorous Testing & Validation:</strong> Before launch, and with every significant update, the tool undergoes meticulous testing. We don't just check if it answers; we check if it answers accurately. This involves asking a wide range of questions – simple to complex – and validating the AI's responses against the source documents, often in collaboration with our HR team.</li>
+            <li><strong>Mechanisms for Keeping Knowledge Current:</strong> Policies evolve. We have established clear processes, working closely with HR, to update the AI's knowledge base promptly whenever official policies are amended or added. This ensures the information provided remains current and relevant.</li>
+            <li><strong>Continuous Monitoring:</strong> Our work doesn't stop at launch. We continuously monitor the performance of the HR Policy Assist, tracking accuracy metrics, analyzing user interactions (while respecting privacy), and identifying any patterns of incorrect answers or areas where understanding needs refinement. This allows us to proactively address issues and retrain the model as needed.</li>
+        </ul>
         
-        <h2>Trend #5: Security Gets Tighter—And Tougher—with AI</h2>
-        <p>As AI becomes increasingly integrated into government services, so do the security challenges it introduces. However, AI also serves as a powerful tool for enhancing security. In 2025, automating threat detection, analyzing large datasets, and rapidly responding to incidents will be critical for protecting government systems and sensitive information.</p>
-        <p>For example, New York City experiences around 90 billion cyber events each week. “We have to distill those 90 billion events down to less than 50 or 60 things we look at. We couldn’t do that without a lot of artificial intelligence and automated decision-making tools," explains Matthew Fraser, Chief Technology Officer of New York City.</p>
+        <h2>Put It to the Test – Help Us Stay Reliable!</h2>
+        <p>The HR Policy Assist is designed to be your dependable first stop for policy questions. We encourage you to try it out! Ask about:</p>
+        <ul>
+            <li>Specific leave policies (Annual, Sick, Parental)</li>
+            <li>Travel and expense guidelines</li>
+            <li>Benefits information</li>
+            <li>Performance review processes</li>
+            <li>Code of Conduct queries</li>
+        </ul>
+        
+        <p>Your interaction is valuable. Even more valuable is your feedback on the accuracy of the responses. If you ever feel an answer is unclear, incorrect, or missing context, please let us know using the feedback mechanism within NexusAI. This direct feedback is crucial – it helps us uphold our commitment to reliability and continuously improve the tool for everyone. It embodies the Team Player spirit of seeking constructive feedback to achieve shared objectives.</p>
 
-        <h2>The Opportunity Ahead</h2>
-        <p>Across the public sector, there is a groundswell of enthusiasm for AI, with agencies harnessing its capabilities to enhance efficiency, improve decision-making, and better serve their constituents. In the future, we can expect agencies to appoint dedicated AI leaders who will drive governance, build public trust, and invest in effective workforce strategies that prioritize both AI advancements and security. These efforts are crucial for the responsible and secure development and deployment of AI across all levels of government.</p>
-
-        <p>As we embrace the future of AI in 2025, it will be essential to stay informed and adaptable, ensuring that these advancements deliver meaningful benefits to society.</p>
+        <p>We are committed to providing you with AI tools that are not only powerful but also trustworthy and dependable. The HR Policy Assist is a prime example of this commitment in action, driven by our Responsible and Accountable values.</p>
+        
+        <p>Thank you for using NexusAI!</p>
     `
-        },
+},
         "post-3": {
              id: "post-3", // *** NOTE: You had post-2 twice in HTML for card 3, changing ID here to post-3 ***
              title: "Maximizing Data Security with NexusAI", // Card 3 title
