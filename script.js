@@ -185,12 +185,12 @@ document.addEventListener('DOMContentLoaded', function() {
     `
 },
         "post-3": {
-             id: "post-3", // *** NOTE: You had post-2 twice in HTML for card 3, changing ID here to post-3 ***
+             id: "post-3",
              title: "Maximizing Data Security with NexusAI", // Card 3 title
              imageSrc: "Component 13.jpg", // Image for card 3
              tag: "Security",
-            
-              // Example views for card 3
+            author:"Chinmay Pagey",
+              
              fullContent: `
         <p>In today's digital world, where data breaches and privacy concerns dominate headlines, security has become a paramount concern for organizations and users alike. It is important to understand the importance of protecting sensitive data and ensuring user privacy. Our internal platform is designed with robust security features, leveraging our own vector embedding model to provide a secure, efficient, and reliable environment. Here’s an overview of the security measures that make NexusAI a trusted platform.</p>
         
