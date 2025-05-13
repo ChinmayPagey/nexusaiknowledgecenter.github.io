@@ -290,16 +290,17 @@ a { /* Added base link style */
 
 /* === Blog Post Detail Author === */
 .blog-post-header .blog-author-detail {
-    font-size: 0.9em;
-    color: #555555;
-    margin-left: 15px; /* If it's next to views */
-    /* Or if it's on its own line: */
-    /* display: block; */
-    /* margin-top: 8px; */
+    display: block; /* Ensures it takes its own line */
+    font-size: 0.9rem; /* Adjust to match desired size, similar to your image */
+    color: #55595c;   /* Text color for "By Author Name", adjust as needed */
+    margin-top: 0.5rem; /* Space between title and author line */
+    margin-bottom: 1.25rem; /* Space between author line and meta/body */
+    /* Remove margin-left if it was previously used for side-by-side alignment */
+    margin-left: 0;
 }
 
 #blog-post-author {
-    font-weight: 600; /* Bolder name in detail view */
+    font-weight: 500; /* Bolder name in detail view */
 }
 
 /* Optional: If you want meta items (views, author) side-by-side in detail view */
@@ -617,12 +618,17 @@ a { /* Added base link style */
     font-weight: 700;
     color: #212529;
     line-height: 1.3;
-    margin-bottom: 1rem; /* Space below title */
+    margin-bottom: 0.25rem; /* Space below title */
 }
 
 .blog-post-meta {
     font-size: 0.9rem;
     color: #6c757d;
+    /* If meta was previously relying on author for spacing, adjust its margin-top */
+    margin-top: 0; /* Reset margin-top if author line now provides the gap above meta */
+    display: flex;
+    align-items: center;
+    gap: 15px; /* This was already there, for spacing between views and other meta */
 }
 
 .blog-post-meta .views { /* Inherits styles from blog list */
