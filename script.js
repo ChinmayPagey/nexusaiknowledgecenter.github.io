@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-
+   
     const tabs = document.querySelectorAll('.knowledge-center-nav .kc-tab');
     const underline = document.querySelector('.knowledge-center-nav .kc-underline');
     const navList = document.querySelector('.knowledge-center-nav ul');
@@ -81,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
     "title": "NexusAI: Innovating with Integrity and Embodying Our CREATE Values", // Title from featured post
     "imageSrc": "Component 12.jpg", // ** Use the ACTUAL image for the featured post **
     "tag": "Blog",
+    "author": "Anup Gholkar",
     "fullContent": `
         <p>I'm incredibly excited to formally introduce NexusAI, our new internal AI platform designed to empower each of you, streamline workflows, and unlock new levels of productivity and insight right here at Crompton. As you explore the NexusAI homepage, you'll find a suite of powerful tools: NexusAI Chat for comprehensive assistance, HR Policy Assist for instant answers, Mermaid Editor for planning, Image Canvas for visual design, and Document Query for extracting insights.</p>
         
@@ -113,6 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
     title: "NexusAI: Innovating with Integrity and Embodying Our CREATE Values", // Card 1 title
     imageSrc: "Component 12.jpg", // Image for card 1
     tag: "NexusAI",
+    author: "Anup Gholkar",
     fullContent: `
         <p>I'm incredibly excited to formally introduce NexusAI, our new internal AI platform designed to empower each of you, streamline workflows, and unlock new levels of productivity and insight right here at Crompton. As you explore the NexusAI homepage, you'll find a suite of powerful tools: NexusAI Chat for comprehensive assistance, HR Policy Assist for instant answers, Mermaid Editor for planning, Image Canvas for visual design, and Document Query for extracting insights.</p>
         
@@ -145,6 +147,7 @@ document.addEventListener('DOMContentLoaded', function() {
     title: "Dependable Assistance: How We Ensure Reliability in NexusAI's HR Policy Assist (Our Responsible Commitment)", // Card 1 title
     imageSrc: "Component 14.jpg", // Image for card 1
     tag: "NexusAI",
+    author: "Anup Gholkar",
     fullContent: `
         <p>Navigating company policies to find specific answers can sometimes feel like searching for a needle in a haystack. Whether you're clarifying leave entitlements, understanding expense guidelines, or checking the latest WFH policy, getting accurate information quickly is essential.</p>
         
@@ -186,6 +189,7 @@ document.addEventListener('DOMContentLoaded', function() {
              title: "Maximizing Data Security with NexusAI", // Card 3 title
              imageSrc: "Component 13.jpg", // Image for card 3
              tag: "Security",
+            
               // Example views for card 3
              fullContent: `
         <p>In today's digital world, where data breaches and privacy concerns dominate headlines, security has become a paramount concern for organizations and users alike. It is important to understand the importance of protecting sensitive data and ensuring user privacy. Our internal platform is designed with robust security features, leveraging our own vector embedding model to provide a secure, efficient, and reliable environment. Here’s an overview of the security measures that make NexusAI a trusted platform.</p>
@@ -212,7 +216,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Add more post objects as needed
     };
         // Add more post objects as needed
-    
+        populateBlogCardAuthors(); 
 
     // Selectors for the new blog post detail elements
     const blogPostDetailSection = document.getElementById('blog-post-detail');
@@ -221,8 +225,49 @@ document.addEventListener('DOMContentLoaded', function() {
     const blogPostImageEl = document.querySelector('#blog-post-detail .blog-post-image img');
     const blogPostTagEl = document.querySelector('#blog-post-detail .blog-post-header .tag');
     const blogPostViewsEl = document.getElementById('blog-post-views');
+    const blogPostAuthorEl = document.getElementById('blog-post-author'); 
     const blogPostBodyEl = document.getElementById('blog-post-body');
     const backToBlogsBtn = document.querySelector('.back-to-blogs-btn');
+    function displayBlogPost(postId) {
+        const postData = blogPostsData[postId];
+
+        if (!postData || !blogPostDetailSection || !blogListSection) {
+            console.error("Blog post data or sections not found for ID:", postId);
+            return;
+        }
+
+        // Populate the detail view elements
+        blogPostTitleEl.textContent = postData.title;
+        blogPostImageEl.src = postData.imageSrc;
+        blogPostImageEl.alt = postData.title;
+        blogPostTagEl.textContent = postData.tag;
+        // blogPostViewsEl.textContent = postData.views; // If you implement views
+
+        // Populate Author
+        if (blogPostAuthorEl) {
+            if (postData.author) {
+                blogPostAuthorEl.textContent = postData.author;
+                // Make sure the parent "By " element is visible
+                if (blogPostAuthorEl.parentElement.classList.contains('blog-author-detail')) {
+                     blogPostAuthorEl.parentElement.style.display = 'inline'; // Or 'block'
+                }
+            } else {
+                blogPostAuthorEl.textContent = '';
+                // Hide the "By " text if no author
+                if (blogPostAuthorEl.parentElement.classList.contains('blog-author-detail')) {
+                    blogPostAuthorEl.parentElement.style.display = 'none';
+                }
+            }
+        }
+
+        blogPostBodyEl.innerHTML = postData.fullContent;
+
+        // Hide the blog list view and show the detail view
+        blogListSection.classList.remove('active-content');
+        blogPostDetailSection.classList.add('active-content');
+
+        window.scrollTo(0, 0); // Scroll to top
+    }
     /*
     // --- Tab Switching Logic ---
     function updateUnderline() {
@@ -241,6 +286,42 @@ document.addEventListener('DOMContentLoaded', function() {
         underline.style.width = `${spanWidth}px`;
     }
    */
+  // Inside script.js, can be placed near other utility functions or before the DOMContentLoaded listener
+
+  function populateBlogCardAuthors() {
+    console.log("Running populateBlogCardAuthors..."); // 1. Is function called?
+    const blogCards = document.querySelectorAll('#blogs-content .blog-card');
+    console.log("Found blog cards:", blogCards.length); // 2. Are cards found?
+
+    blogCards.forEach((card, index) => {
+        console.log(`Processing card ${index + 1}`);
+        const linkOverlay = card.querySelector('.card-link-overlay');
+        if (linkOverlay) {
+            const postId = linkOverlay.dataset.postId;
+            console.log(` - Post ID: ${postId}`); // 3. Is postId found?
+            const postData = blogPostsData[postId];
+            console.log(` - Post Data:`, postData); // 4. Is data found for this ID?
+
+            const authorNameSpan = card.querySelector('.blog-card-meta .author-name');
+            console.log(` - Author Name Span element:`, authorNameSpan); // 5. Is the span element found?
+
+            if (postData && postData.author && authorNameSpan) {
+                console.log(`   - Setting author: ${postData.author}`); // 6. Is it trying to set the author?
+                authorNameSpan.textContent = postData.author;
+                if (authorNameSpan.parentElement.classList.contains('blog-author')) {
+                    authorNameSpan.parentElement.style.display = 'inline';
+                }
+            } else {
+                console.log(`   - Condition not met to set author. postData: ${!!postData}, postData.author: ${postData ? postData.author : 'N/A'}, authorNameSpan: ${!!authorNameSpan}`);
+                if (authorNameSpan && authorNameSpan.parentElement.classList.contains('blog-author')) {
+                    authorNameSpan.parentElement.style.display = 'none';
+                }
+            }
+        } else {
+            console.log(` - Card ${index + 1} missing linkOverlay`);
+        }
+    });
+}
     function displayBlogPost(postId) {
         const postData = blogPostsData[postId];
 
@@ -262,6 +343,28 @@ document.addEventListener('DOMContentLoaded', function() {
         blogPostDetailSection.classList.add('active-content');
 
         window.scrollTo(0, 0); // Scroll to top
+        console.log("displayBlogPost - Attempting to populate author for post ID:", postId); // 1.
+    console.log("displayBlogPost - Post data:", postData); // 2.
+    if (blogPostAuthorEl) {
+        console.log("displayBlogPost - blogPostAuthorEl found:", blogPostAuthorEl); // 3.
+        if (postData.author) {
+            console.log(`displayBlogPost - Setting author: ${postData.author}`); // 4.
+            blogPostAuthorEl.textContent = postData.author;
+            if (blogPostAuthorEl.parentElement.classList.contains('blog-author-detail')) {
+                 blogPostAuthorEl.parentElement.style.display = 'inline';
+            }
+        } else {
+            console.log("displayBlogPost - No author in postData or postData.author is falsy."); // 5.
+            blogPostAuthorEl.textContent = '';
+            if (blogPostAuthorEl.parentElement.classList.contains('blog-author-detail')) {
+                blogPostAuthorEl.parentElement.style.display = 'none';
+            }
+        }
+    } else {
+        console.log("displayBlogPost - blogPostAuthorEl NOT found."); // 6.
+    }
+
+    blogPostBodyEl.innerHTML = postData.fullContent;
     }
     
 
