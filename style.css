@@ -274,7 +274,40 @@ a { /* Added base link style */
 /* ========================================= */
 /* === NEW BLOGS SECTION STYLES START === */
 /* ========================================= */
+ /* === Blog Card Author === */
+#blogs-content .blog-card-meta .blog-author {
+    font-size: 0.8em; /* Slightly smaller */
+    color: #555555;   /* Subdued color */
+    display: block;   /* Each meta item on its own line, or inline-block */
+    margin-bottom: 5px; /* Space below if it's above other meta or title */
+    /* If you have views or date, you might want to use flexbox on .blog-card-meta */
+}
 
+#blogs-content .blog-card-meta .author-name {
+    font-weight: 500; /* Slightly bolder name */
+}
+
+
+/* === Blog Post Detail Author === */
+.blog-post-header .blog-author-detail {
+    font-size: 0.9em;
+    color: #555555;
+    margin-left: 15px; /* If it's next to views */
+    /* Or if it's on its own line: */
+    /* display: block; */
+    /* margin-top: 8px; */
+}
+
+#blog-post-author {
+    font-weight: 600; /* Bolder name in detail view */
+}
+
+/* Optional: If you want meta items (views, author) side-by-side in detail view */
+.blog-post-header .blog-post-meta {
+    display: flex; /* Arrange items in a row */
+    align-items: center; /* Vertically align items */
+    gap: 15px; /* Space between items like views and author */
+}
 #blogs-content {
     /* Removed padding: 0; allow inner sections to have padding */
     background-color: #f8f9fa; /* Light background for the whole blogs tab content area */
@@ -435,6 +468,7 @@ a { /* Added base link style */
 #blogs-content .blog-card:hover .blog-card-image img {
      transform: scale(1.03);
 }
+
 
 
 #blogs-content .blog-card-content {
