@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
     "featured-post": {
     "id": "featured-post",
     "title": "NexusAI: Innovating with Integrity and Embodying Our CREATE Values", // Title from featured post
-    "imageSrc": "Component 12.jpg", // ** Use the ACTUAL image for the featured post **
+    "imageSrc": "0001.png", // ** Use the ACTUAL image for the featured post **
     "tag": "Blog",
     "author": "Anup Gholkar",
     "fullContent": `
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
 "post-1": {
     id: "post-1",
     title: "NexusAI: Innovating with Integrity and Embodying Our CREATE Values", // Card 1 title
-    imageSrc: "Component 12.jpg", // Image for card 1
+    imageSrc: "0001.png", // Image for card 1
     tag: "NexusAI",
     author: "Anup Gholkar",
     fullContent: `
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "post-2": {
             id: "post-2",
     title: "Dependable Assistance: How We Ensure Reliability in NexusAI's HR Policy Assist (Our Responsible Commitment)", // Card 1 title
-    imageSrc: "Component 14.jpg", // Image for card 1
+    imageSrc: "0002.png", // Image for card 1
     tag: "NexusAI",
     author: "Anup Gholkar",
     fullContent: `
