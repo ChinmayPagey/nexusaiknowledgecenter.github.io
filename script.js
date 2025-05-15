@@ -87,6 +87,9 @@ document.addEventListener('DOMContentLoaded', function() {
 <h3>Voice Input Functionality</h3>
 <p>The mic button allows you to record your voice and convert it to text. This feature makes it easier to communicate your thoughts and questions verbally.</p>
 <img src="NexusAI chat user manual 11.png" alt="NexusAI chat user manual 11" class="manual-inline-image">
+<br>
+<h3>Accessing Settings</h3>
+<p>To explore additional customization options, click on the <strong>profile icon</strong> at the top right or the bottom left. This will take you to the settings menu, where you can adjust theme options, language settings, display preferences, and more to tailor NexusAI Chat to your preferences.</p>
 `
         },
         "HR Policy Assist": { // Key matches href="#HR Policy Assist"
@@ -391,9 +394,9 @@ document.addEventListener('DOMContentLoaded', function() {
         <p>In a world where security and privacy are critical, NexusAI stands out by offering a platform that prioritizes user protection while delivering advanced functionalities. By harnessing our own vector embedding model along with robust security measures, we provide a secure environment that enhances productivity without compromising safety. Explore NexusAI today and experience the peace of mind that comes with a platform built with security at its core.</p>
     `
         }
-        // Add more post objects as needed
+        
     };
-        // Add more post objects as needed
+        
         populateBlogCardAuthors(); 
 
     // Selectors for the new blog post detail elements
