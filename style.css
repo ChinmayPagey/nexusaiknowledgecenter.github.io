@@ -51,7 +51,7 @@ a { /* Added base link style */
    display: block;
    height: 35px;
    width: auto;
-   max-height: 45px;
+   max-height: 20px;
 }
 .main-header .kctext {
     /* This method centers it perfectly regardless of logo/profile icon width */
