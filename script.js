@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         "HR Policy Assist": { // Key matches href="#HR Policy Assist"
             content: `
-                <h1>Comprehensive User Guide for HR Policy Assist</h1>
+                <h1>HR Policy Assist</h1>
 
 <p>Welcome to the official user guide for HR Policy Assist. This tool is designed to provide professional support for a wide array of human resource-related inquiries. By utilizing this tool, HR professionals and employees can access essential information regarding company policies and practices efficiently. This guide outlines the functionalities of HR Policy Assist and provides clear instructions on how to use it effectively.</p>
 
