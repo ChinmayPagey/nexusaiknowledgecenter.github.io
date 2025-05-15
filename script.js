@@ -8,67 +8,245 @@ document.addEventListener('DOMContentLoaded', function() {
     const manualPagesData = {
         "NexusAI Chat": { // Key matches href="#NexusAI Chat" (minus #)
             // Title can be inferred from key or link text, but content is key
-            content: `
-                <h1>NexusAI Chat</h1>
-                <p>Welcome to the NexusAI Chat documentation. This powerful tool allows you to engage in conversational AI interactions for various tasks.</p>
-                <h2>Key Features:</h2>
-                <ul>
-                    <li>Natural language understanding for intuitive queries.</li>
-                    <li>Context retention for follow-up questions.</li>
-                    <li>Ability to assist with brainstorming, drafting text, and summarizing information.</li>
-                    <li>Integration with other NexusAI modules (details pending).</li>
-                </ul>
-                <h2>Getting Started:</h2>
-                <p>Simply type your question or prompt into the chat interface and press Enter. Be clear and specific for the best results.</p>
-                <p><strong>Example Prompt:</strong> "Draft an email to the team about the upcoming project deadline."</p>
-            `
+            content:`
+<h1>NexusAI Chat</h1>
+<p>Welcome to the user guide for NexusAI Chat. This document provides an overview of the platform’s features and functionalities, helping you navigate and make the most of this powerful AI tool. NexusAI Chat is designed to support a variety of tasks, from generating content to retrieving information, all aimed at enhancing your productivity.</p>
+
+<h2>User Interface Overview</h2>
+<h3>Model Selection</h3>
+<p>At the top of the NexusAI Chat interface, you can choose from several AI models, including GPT, Gemini, Claude, and Llama. Each model has unique strengths, allowing you to select the one best suited for your specific needs.</p>
+<p>Additionally, you can set your preferred model as the default model by clicking the “Set as Default” button. This ensures that your chosen model will be used automatically in future sessions, providing a seamless experience.</p>
+<center>
+    <img src="NexusAI chat user manual 1.png" alt="NexusAI chat user manual 1" width="300" height=200">
+    <br> <!-- Line break -->
+</center>
+
+
+<h3>Comparison of models</h3>
+<p>Next to the model selection, the + button allows you to compare outputs from different AI models. This feature is helpful for evaluating the performance of various models, enabling you to choose the best option for your tasks.</p>
+
+<center>
+    <img src="NexusAI chat user manual 2.png" alt="NexusAI chat user manual 2" width="300" height=200">
+    <br> <!-- Line break -->
+</center>
+<h2>Sidebar Navigation</h2>
+<h3>Homepage Shortcut</h3>
+<p>The left sidebar includes the NexusAI logo. Clicking this logo takes you back to the homepage, making navigation straightforward.</p>
+
+<h3>New Chat Initiation</h3>
+<p>To start a new chat, simply click the pencil icon in the sidebar. This will refresh the chat interface, allowing you to enter a new question or topic without any hassle.</p>
+
+<h3>Tool Accessibility</h3>
+<p>The Tools drop-down menu provides easy access to all available tools within NexusAI Chat. This feature enables quick navigation to different functionalities, enhancing your overall user experience.</p>
+
+<center>
+    <img src="NexusAI chat user manual 3.png" alt="NexusAI chat user manual 3" width="300" height=200">
+    <br> <!-- Line break -->
+</center>
+<h2>Chat Management Features</h2>
+<h3>Tags Section</h3>
+<p>In the Tags section, you can view all tags you’ve assigned to your chats. This helps you organize your conversations based on specific themes or topics, making it easier to find them later.</p>
+
+<center>
+    <img src="NexusAI chat user manual 8.png" alt="NexusAI chat user manual 8" width="300" height=200">
+    <br> <!-- Line break -->
+</center>
+<h3>Chat History</h3>
+<p>The History section keeps a record of all your previous chats, allowing you to revisit any past interactions whenever it's convenient for you.</p>
+<center>
+    <img src="NexusAI chat user manual 7.png" alt="NexusAI chat user manual 7" width="300" height=200">
+    <br> <!-- Line break -->
+</center>
+<h3>Advanced Chat Management</h3>
+<p>Next to each chat in your history, you’ll see a menu represented by three dots. Clicking on this menu provides several options:</p>
+<ul>
+    <li><strong>Rename:</strong> Change the title of a chat to something more descriptive.</li>
+    <li><strong>Clone:</strong> Create a copy of a chat for further use.</li>
+    <li><strong>Archive:</strong> Move older conversations out of your main view.</li>
+    <li><strong>Share:</strong> Easily distribute chat content to others.</li>
+    <li><strong>Delete:</strong> Remove chats that you no longer need.</li>
+    <li><strong>Add Tags:</strong> Help categorize chats by assigning them relevant tags.</li>
+</ul>
+<center>
+    <img src="NexusAI chat user manual 10.png" alt="NexusAI chat user manual 10" width="300" height=200">
+    <br> <!-- Line break -->
+</center>
+<h2>Interaction Features</h2>
+<h3>Text Box Utilization</h3>
+<p>At the bottom of the text input area, you’ll find a + icon. Clicking this icon presents the Wikipedia option, allowing you to access reliable information directly from Wikipedia.</p>
+<img src="NexusAI chat user manual 4.png" alt="NexusAI chat user manual 3" class="manual-inline-image">
+<br>
+<h3>Document Interaction</h3>
+<p>The icon next to the plus sign enables you to upload documents. This feature allows you to bring in files and interact with their content right within the chat, adding another layer of functionality.</p>
+<img src="NexusAI chat user manual 5.png" alt="NexusAI chat user manual 4" class="manual-inline-image">
+<br>
+<h3>Web Search Capability</h3>
+<p>The globe icon below the text box lets you conduct web searches. This means you can find information online without leaving the chat, greatly enhancing your research capabilities.</p>
+<img src="NexusAI chat user manual 6.png" alt="NexusAI chat user manual 6" class="manual-inline-image">
+<br>
+<h3>Voice Input Functionality</h3>
+<p>The mic button allows you to record your voice and convert it to text. This feature makes it easier to communicate your thoughts and questions verbally.</p>
+<img src="NexusAI chat user manual 11.png" alt="NexusAI chat user manual 11" class="manual-inline-image">
+`
         },
         "HR Policy Assist": { // Key matches href="#HR Policy Assist"
             content: `
-                <h1>HR Policy Assist</h1>
-                <p>The HR Policy Assist module provides quick access to information regarding company policies, benefits, and procedures.</p>
-                <p>Instead of searching through lengthy documents, ask specific questions in plain language.</p>
-                <h2>Example Questions:</h2>
-                <ul>
-                    <li>"What is the company policy on performance bonuses"</li>
-                    <li>"What are the CREATE values at Crompton?"</li>
-                    <li>"How do I apply for maternity leave benefit?"</li>
-                </ul>
-                <p><strong>Note:</strong> HR Policy Assist is trained on approved company documents. For complex or sensitive matters, please consult directly with the HR department.</p>
-                 <img src="HR Policy assist screen.png" alt="Placeholder HR Assist Interface" class="manual-inline-image">  <!-- Example Image -->
-            `
+                <h1>Comprehensive User Guide for HR Policy Assist</h1>
+
+<p>Welcome to the official user guide for HR Policy Assist. This tool is designed to provide professional support for a wide array of human resource-related inquiries. By utilizing this tool, HR professionals and employees can access essential information regarding company policies and practices efficiently. This guide outlines the functionalities of HR Policy Assist and provides clear instructions on how to use it effectively.</p>
+
+<h2>Overview of HR Policy Assist Functionality</h2>
+
+<p><strong>HR Policy Assist</strong> serves as an interactive platform where users can pose HR-related questions and receive accurate, timely responses. It is equipped to handle a diverse range of queries, facilitating informed decision-making and enhancing understanding of HR policies and procedures.</p>
+
+<h3>Using HR Policy Assist</h3>
+
+<p>To engage with <strong>HR Policy Assist</strong>, simply enter your HR-related question into the chat interface. The tool employs advanced AI technology to process your inquiry and generate a relevant response drawn from a comprehensive database of HR information.</p>
+<img src="HR Policy assist user manual 1.png" alt="HR Policy assist user manual 1" class="manual-inline-image">
+<br>
+<h4>Example Questions:</h4>
+<ul>
+    <li>"What is the company policy on performance bonuses"</li>
+    <li>"What are the CREATE values at Crompton?"</li>
+    <li>"How do I apply for maternity leave benefit?"</li>
+</ul>
+
+<h3>Resetting the Chat</h3>
+
+<p>Should you wish to initiate a new conversation or clear a previous inquiry, you can do so by clicking the <strong>“New Chat”</strong> button located at the top right of the interface. This action will refresh the chat window, allowing you to start a new line of inquiry without retaining prior context.</p>
+<img src="HR Policy Assist user manual 2.png" alt="HR Policy assist user manual 2" class="manual-inline-image">
+`
         },
         "Document Query": { // Key matches href="#Document Query"
             content: `
                 <h1>Document Query</h1>
-                <p>Leverage NexusAI to interact with your uploaded documents (PDFs, legal documents, contracts, reports etc.). Ask questions directly about the content within your files.</p>
-                <h2>How it Works:</h2>
-                <ol>
-                    <li>Upload your document(s) through the designated interface.</li>
-                    <li>Select the document you wish to query.</li>
-                    <li>Type your question related to the document's content into the query bar.</li>
-                    <li>NexusAI analyzes the document and provides relevant answers or excerpts.</li>
-                </ol>
-                <h2>Use Cases:</h2>
-                <ul>
-                    <li>Finding specific clauses in contracts.</li>
-                    <li>Summarizing long reports.</li>
-                    <li>Extracting key data points from technical documents.</li>
-                </ul>
-                <p>Ensure your documents have selectable text for best results (Documents other than PDFs may not work).</p>
+
+<p>Welcome to the official user guide for Document Query. This tool is designed to facilitate the efficient extraction of information from documents, allowing users to upload files and pose inquiries related to their content. This guide provides a detailed walkthrough of the tool's functionalities to ensure you can fully leverage its capabilities.</p>
+
+<h2>Overview of Document Query Functionality</h2>
+
+<p>Document Query enables users to interact with their documents in an effective manner. Please note that, at this time, only PDF files are supported for upload.</p>
+
+<h2>Document Upload Options</h2>
+
+<ul>
+    <li><strong>Single Document Upload:</strong> Users can upload one PDF document at a time to initiate inquiries.</li>
+    <li><strong>Folder Upload:</strong> Multiple PDF documents can be uploaded simultaneously by selecting an entire folder.</li>
+</ul>
+
+   <img src="Document Query user manual 1.png" alt="Document Query user manual 3">
+    <br> 
+
+<h2>Navigating the Document Query Interface</h2>
+
+<h3>Accessing Uploaded Documents</h3>
+
+<p>Once documents are uploaded, they will be listed on the main page of the Document Query. Clicking on any document will direct you to a dedicated chat page associated with that document, where the following functionalities are available:</p>
+
+<ul>
+    <li><strong>Model Selection:</strong> At the top of the chat window, users can select any AI model to query the document.</li>
+    
+    <center>
+   <img src="Document Query user manual 2.png" alt="Document Query user manual 2" width="300" height=200">
+    <br> 
+</center> 
+
+    <li><strong>Document Display:</strong> The left side of the screen features a view of the uploaded document, allowing easy reference while formulating your questions.</li>
+    
+    <img src="Document Query user manual 3.png" alt="Document Query user manual 3">
+    <br> 
+
+</ul>
+
+<h2>Engaging with the Document</h2>
+
+<h3>Inquiring with Single Questions</h3>
+
+<p>Users can input questions related to the document's content in the chat interface on the right sidee. The selected AI model will generate a response based on the information contained within the document.</p>
+<h3>Page Number Display</h3>
+<p> The specific page number where answers are located will be indicated alongside the response.<p>
+<img src="Document Query user manual 4.png" alt="Document Query user manual 4">
+<h3>Inquiring with Multiple Questions</h3>
+
+<p>For users wishing to engage with multiple documents, click on the document query text to go back to the main page:</p>
+<center>
+    <img src="Document Query user manual 8.png" alt="Document Query user manual 8" width="700" height=500">
+    <br> 
+</center>
+<ul>
+    <li><strong>Multiple documents, multiple questions:</strong> Scroll to the bottom of the page. At the bottom, options will be available to select multiple documents for inquiry.</li>
+    <li><strong>Model Preferences:</strong> Each question can be directed to a different AI model, which allows flexibility in querying.</li>
+</ul>
+<center>
+    <img src="Document Query user manual 5.png" alt="Document Query user manual 5" width="700" height=500">
+    <br> 
+</center>
+<h2>Generating Responses</h2>
+
+<p>Upon submitting questions, click the “Generate Answer” button. The responses will be presented in a tabular format for clarity.</p>
+<center>
+    <img src="Document Query user manual 6.png" alt="Document Query user manual 6" width="700" height=500">
+    <br> 
+</center>
+<h2>Downloading Results</h2>
+
+<p>After generating answers, users have the option to download the resulting table in Excel format.</p>
+
+<center>
+   <img src="Document Query user manual 7.png" alt="Document Query user manual 7" width="700" height=500">
+    <br> 
+</center>
             `
         },
         "Image Canvas": { // Key matches href="#Image Canvas"
             content: `
                 <h1>Image Canvas</h1>
-                <p>The Image Canvas integrates AI capabilities for image generation and editing (Details subject to feature availability).</p>
-                <h2>Features:</h2>
-                <ul>
-                    <li>Generating images from text descriptions (Text-to-Image).</li>
-                    <li>Add Crompton Products in the images.</li>
-                    <li>Experiment with multiple posters for you advertising needs</li>
-                </ul>
-                <p>This section will be updated with detailed instructions and examples as the Image Canvas features are rolled out.</p>
+
+<p>Welcome to the official user guide for Image Canvas. This sophisticated tool is designed to facilitate the generation of custom images through advanced AI technology. Users are empowered to select various parameters, allowing for the creation of images that align with specific requirements. This guide offers a thorough walkthrough of the tool's functionalities, ensuring optimal utilization of its capabilities.</p>
+
+<h2>Overview of Image Canvas Functionality</h2>
+
+<p><strong>Image Canvas</strong> provides users with the capability to generate images based on defined prompts and product selections. The user interface has been meticulously designed to promote ease of use.</p>
+
+<h3>Selecting the Image Generation Model</h3>
+
+<p>At the top left of the <strong>Image Canvas</strong> interface, users have the option to choose the image generation model. Currently, two models are available for selection:</p>
+<ul>
+    <li><strong>DALL-E</strong></li>
+    <li><strong>Pollination</strong></li>
+</ul>
+<br>
+<p>Selecting the appropriate model is crucial, as it will dictate the nature of the generated images. Users are encouraged to choose the model that best fits their specific needs.</p>
+<img src="Image Canvas user manual 1.png" alt="Image Canvas user manual 1">
+<br>
+<h3>Choosing Product Categories</h3>
+
+<p>Adjacent to the model selection, users are prompted to select the <strong>product category</strong> that will be featured in the generated image. This categorization helps contextualize the image creation process.</p>
+<img src="Image Canvas user manual 2.png" alt="Image Canvas user manual 2">
+<br>
+<p>Subsequent to the category selection, users have to choose a relevant <strong>sub-category</strong> that complements the primary category.</p>
+<img src="Image Canvas user manual 3.png" alt="Image Canvas user manual 3">
+<br>
+<h3>Selecting the Product</h3>
+
+<p>Following the selection of category and sub-category, users will designate the specific <strong>product</strong> to be included in the image.</p>
+<img src="Image Canvas user manual 4.png" alt="Image Canvas user manual 4">
+<br>
+<h3>Describing the Setting</h3>
+
+<p>In the designated text box, users are invited to provide a comprehensive description of the <strong>setting</strong> for the product. This input serves as the prompt for the AI model, guiding it to generate an image that aligns with the user's envisioned scene and atmosphere.</p>
+<img src="Image Canvas user manual 5.png" alt="Image Canvas user manual 5">
+<br>
+<h3>Generating the Image</h3>
+
+<p>Upon completion of the aforementioned selections—image generation model, product category, sub-category, product, and setting—users should click the <strong>"Generate"</strong> button. The AI will process the input and generate an image based on the specified parameters.</p>
+
+<h3>Customizing the Image</h3>
+
+<p>Once the image is generated, users have the flexibility to <strong>drag and resize</strong> the product within the image as desired. This feature allows for additional customization to align the image with the user's creative vision and requirements.</p>
+
+<img src="Image Canvas user manual 6.png" alt="Image Canvas user manual 6">
+<br>
                 
             `
         }
@@ -80,7 +258,7 @@ document.addEventListener('DOMContentLoaded', function() {
     "id": "featured-post",
     "title": "NexusAI: Innovating with Integrity and Embodying Our CREATE Values", // Title from featured post
     "imageSrc": "0001.png", // ** Use the ACTUAL image for the featured post **
-    "tag": "Blog",
+    "tag": "NexusAI",
     "author": "Anup Gholkar",
     "fullContent": `
         <p>I'm incredibly excited to formally introduce NexusAI, our new internal AI platform designed to empower each of you, streamline workflows, and unlock new levels of productivity and insight right here at Crompton. As you explore the NexusAI homepage, you'll find a suite of powerful tools: NexusAI Chat for comprehensive assistance, HR Policy Assist for instant answers, Mermaid Editor for planning, Image Canvas for visual design, and Document Query for extracting insights.</p>
